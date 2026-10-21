@@ -1,87 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ne">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Thought Circle — नेपाली तथा अंग्रेजी समाचार, साहित्य र विचारको अनलाइन पोर्टल।">
-  <title>Thought Circle | समाचार र साहित्य</title>
+  <title>Thought Circle</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <div class="topline"><div class="wrap top-inner"><span data-ne="समाचार • साहित्य • विचार" data-en="NEWS • LITERATURE • IDEAS">समाचार • साहित्य • विचार</span><span id="todayDate"></span></div></div>
-  <header class="header wrap">
-    <a class="brand" href="#home"><span class="brand-mark">TC</span><span><b>Thought Circle</b><small data-ne="विचारबाट परिवर्तन सुरु हुन्छ" data-en="Change begins with a thought">विचारबाट परिवर्तन सुरु हुन्छ</small></span></a>
-    <div class="header-actions"><button id="langBtn" class="outline-btn" type="button">English</button><button id="adminOpen" class="dark-btn" type="button" data-ne="एडमिन" data-en="Admin">एडमिन</button><button id="mobileMenuBtn" class="menu-btn" type="button" aria-label="मेनु">☰</button></div>
-  </header>
-  <nav class="nav"><div class="wrap nav-inner" id="navLinks">
-    <a href="#home" data-ne="गृहपृष्ठ" data-en="Home">गृहपृष्ठ</a><a href="#latest" data-ne="ताजा समाचार" data-en="Latest News">ताजा समाचार</a><a href="#national" data-ne="राष्ट्रिय" data-en="National">राष्ट्रिय</a><a href="#international" data-ne="अन्तर्राष्ट्रिय" data-en="International">अन्तर्राष्ट्रिय</a><a href="#literature" data-ne="साहित्य" data-en="Literature">साहित्य</a><a href="#opinion" data-ne="विचार" data-en="Opinion">विचार</a>
-  </div></nav>
-
-  <main class="wrap" id="home">
-    <div class="breaking"><strong data-ne="मुख्य विषय" data-en="TOPIC">मुख्य विषय</strong><span data-ne="Thought Circle मा स्वागत छ — समाचार, साहित्य र विचारको साझा मञ्च" data-en="Welcome to Thought Circle — a shared space for news, literature, and ideas">Thought Circle मा स्वागत छ — समाचार, साहित्य र विचारको साझा मञ्च</span></div>
-
-    <section class="lead-grid" id="latest">
-      <article class="lead-story">
-        <div class="lead-image image-news"><span data-ne="समाचार" data-en="NEWS">समाचार</span><i>◉</i></div>
-        <div class="story-content"><span class="tag" data-ne="सम्पादकीय नमुना" data-en="DEMO EDITORIAL">सम्पादकीय नमुना</span><h1 data-ne="समाचार र साहित्यलाई जोड्ने नयाँ डिजिटल मञ्च" data-en="A new digital space connecting news and literature">समाचार र साहित्यलाई जोड्ने नयाँ डिजिटल मञ्च</h1><p data-ne="समसामयिक घटनादेखि सिर्जनात्मक लेखनसम्म — विश्वसनीय सूचना र मौलिक आवाजका लागि Thought Circle।" data-en="From current affairs to creative writing — Thought Circle is a home for useful information and original voices.">समसामयिक घटनादेखि सिर्जनात्मक लेखनसम्म — विश्वसनीय सूचना र मौलिक आवाजका लागि Thought Circle।</p><small class="meta" data-ne="Thought Circle डेस्क · परिचय" data-en="Thought Circle Desk · Introduction">Thought Circle डेस्क · परिचय</small></div>
-      </article>
-      <aside class="side-panel">
-        <div class="panel-title"><h2 data-ne="हाम्रो प्राथमिकता" data-en="Our priorities">हाम्रो प्राथमिकता</h2><span>01—03</span></div>
-        <div class="priority"><b>01</b><div><h3 data-ne="विश्वसनीय समाचार" data-en="Reliable news">विश्वसनीय समाचार</h3><p data-ne="तथ्य, मिति र स्रोतलाई प्राथमिकता।" data-en="Facts, dates, and sources come first.">तथ्य, मिति र स्रोतलाई प्राथमिकता।</p></div></div>
-        <div class="priority"><b>02</b><div><h3 data-ne="मौलिक साहित्य" data-en="Original literature">मौलिक साहित्य</h3><p data-ne="कविता, कथा, गजल र नयाँ लेखक।" data-en="Poetry, stories, ghazals, and new writers.">कविता, कथा, गजल र नयाँ लेखक।</p></div></div>
-        <div class="priority"><b>03</b><div><h3 data-ne="स्वतन्त्र विचार" data-en="Independent ideas">स्वतन्त्र विचार</h3><p data-ne="बहस, विश्लेषण र विविध दृष्टिकोण।" data-en="Discussion, analysis, and diverse perspectives.">बहस, विश्लेषण र विविध दृष्टिकोण।</p></div></div>
-      </aside>
-    </section>
-
-    <section class="section-block" id="national">
-      <div class="section-head"><div><span class="kicker" data-ne="देशभित्रका खबर" data-en="FROM NEPAL">देशभित्रका खबर</span><h2 data-ne="राष्ट्रिय समाचार" data-en="National News">राष्ट्रिय समाचार</h2></div><span class="head-rule"></span></div>
-      <div class="cards-grid" id="nationalCards">
-        <article class="news-card"><div class="card-image tint-one"><span>NEPAL</span></div><div class="card-copy"><span class="tag" data-ne="शिक्षा" data-en="EDUCATION">शिक्षा</span><h3 data-ne="शिक्षा र युवाका विषयमा समाचार यहाँ पढ्नुहोस्" data-en="Read updates on education and youth here">शिक्षा र युवाका विषयमा समाचार यहाँ पढ्नुहोस्</h3><p data-ne="यो नमुना सामग्री हो। वास्तविक समाचार प्रकाशित गर्दा पुष्टि गरिएको विवरण र स्रोत थप्नुहोस्।" data-en="This is sample content. Add verified details and sources when publishing real news.">यो नमुना सामग्री हो। वास्तविक समाचार प्रकाशित गर्दा पुष्टि गरिएको विवरण र स्रोत थप्नुहोस्।</p></div></article>
-        <article class="news-card"><div class="card-image tint-two"><span>COMMUNITY</span></div><div class="card-copy"><span class="tag" data-ne="समाज" data-en="SOCIETY">समाज</span><h3 data-ne="समुदायका आवाज र स्थानीय मुद्दा" data-en="Community voices and local issues">समुदायका आवाज र स्थानीय मुद्दा</h3><p data-ne="स्थानीय समाचारले मानिसको जीवनमा प्रत्यक्ष असर पार्ने विषयलाई उजागर गर्छ।" data-en="Local reporting highlights issues that directly affect people's lives.">स्थानीय समाचारले मानिसको जीवनमा प्रत्यक्ष असर पार्ने विषयलाई उजागर गर्छ।</p></div></article>
-        <article class="news-card"><div class="card-image tint-three"><span>ECONOMY</span></div><div class="card-copy"><span class="tag" data-ne="अर्थतन्त्र" data-en="ECONOMY">अर्थतन्त्र</span><h3 data-ne="अर्थतन्त्र र रोजगारीका उपयोगी जानकारी" data-en="Useful updates on the economy and employment">अर्थतन्त्र र रोजगारीका उपयोगी जानकारी</h3><p data-ne="तथ्याङ्क, मिति र आधिकारिक स्रोत उल्लेख गर्न नबिर्सनुहोस्।" data-en="Remember to include figures, dates, and official sources.">तथ्याङ्क, मिति र आधिकारिक स्रोत उल्लेख गर्न नबिर्सनुहोस्।</p></div></article>
-      </div>
-    </section>
-
-    <section class="section-block" id="international">
-      <div class="section-head"><div><span class="kicker" data-ne="विश्वका घटनाक्रम" data-en="AROUND THE WORLD">विश्वका घटनाक्रम</span><h2 data-ne="अन्तर्राष्ट्रिय समाचार" data-en="International News">अन्तर्राष्ट्रिय समाचार</h2></div><span class="head-rule"></span></div>
-      <div class="cards-grid">
-        <article class="news-card"><div class="card-image tint-four"><span>WORLD</span></div><div class="card-copy"><span class="tag" data-ne="विश्व" data-en="WORLD">विश्व</span><h3 data-ne="विश्वका प्रमुख घटनालाई बुझ्ने प्रयास" data-en="Understanding major events around the world">विश्वका प्रमुख घटनालाई बुझ्ने प्रयास</h3><p data-ne="प्रकाशनअघि समाचारलाई विश्वसनीय स्रोतबाट पुष्टि गर्नुहोस्।" data-en="Verify stories with reliable sources before publication.">प्रकाशनअघि समाचारलाई विश्वसनीय स्रोतबाट पुष्टि गर्नुहोस्।</p></div></article>
-        <article class="news-card"><div class="card-image tint-five"><span>SCIENCE</span></div><div class="card-copy"><span class="tag" data-ne="विज्ञान" data-en="SCIENCE">विज्ञान</span><h3 data-ne="विज्ञान र प्रविधिमा नयाँ विकास" data-en="New developments in science and technology">विज्ञान र प्रविधिमा नयाँ विकास</h3><p data-ne="जटिल विषयलाई सरल भाषामा पाठकसम्म पुर्‍याउनुहोस्।" data-en="Bring complex topics to readers in clear language.">जटिल विषयलाई सरल भाषामा पाठकसम्म पुर्‍याउनुहोस्।</p></div></article>
-        <article class="news-card"><div class="card-image tint-six"><span>CULTURE</span></div><div class="card-copy"><span class="tag" data-ne="संस्कृति" data-en="CULTURE">संस्कृति</span><h3 data-ne="देशदेशका संस्कृति र मानिसका कथा" data-en="Cultures and human stories from around the globe">देशदेशका संस्कृति र मानिसका कथा</h3><p data-ne="विविधता र मानवीय अनुभवलाई सम्मानपूर्वक प्रस्तुत गर्नुहोस्।" data-en="Present diversity and human experiences with respect.">विविधता र मानवीय अनुभवलाई सम्मानपूर्वक प्रस्तुत गर्नुहोस्।</p></div></article>
-      </div>
-    </section>
-
-    <section class="literature-band" id="literature">
-      <div class="literature-intro"><span class="kicker" data-ne="शब्दको संसार" data-en="THE WORLD OF WORDS">शब्दको संसार</span><h2 data-ne="साहित्य र नयाँ साहित्यकार" data-en="Literature & emerging writers">साहित्य र नयाँ साहित्यकार</h2><p data-ne="कविता, गजल, मुक्तक, कथा, निबन्ध र नयाँ लेखकका मौलिक आवाजलाई स्थान दिनुहोस्।" data-en="Make room for poetry, ghazals, short verse, stories, essays, and emerging original voices.">कविता, गजल, मुक्तक, कथा, निबन्ध र नयाँ लेखकका मौलिक आवाजलाई स्थान दिनुहोस्।</p><a class="light-link" href="#adminHelp" data-ne="सिर्जना कसरी थप्ने? ↓" data-en="How to add writing ↓">सिर्जना कसरी थप्ने? ↓</a></div>
-      <div class="poem-preview"><span class="big-quote">“</span><p data-ne="प्रश्नहरू बाँचे भने<br>उत्तर खोज्ने यात्रा पनि बाँच्छ।" data-en="As long as questions live,<br>the journey to find answers lives too.">प्रश्नहरू बाँचे भने<br>उत्तर खोज्ने यात्रा पनि बाँच्छ।</p><small data-ne="नमुना पङ्क्ति · सम्पादकीय टोली" data-en="Sample lines · Editorial desk">नमुना पङ्क्ति · सम्पादकीय टोली</small></div>
-    </section>
-
-    <section class="section-block opinion-section" id="opinion">
-      <div class="section-head"><div><span class="kicker" data-ne="बहस र विश्लेषण" data-en="DEBATE & ANALYSIS">बहस र विश्लेषण</span><h2 data-ne="विचार तथा विशेष लेख" data-en="Opinion & features">विचार तथा विशेष लेख</h2></div><span class="head-rule"></span></div>
-      <p data-ne="विचार लेखमा लेखकको नाम र दृष्टिकोण स्पष्ट राख्नुहोस्। विचार र प्रमाणित समाचारलाई अलग-अलग पहिचान दिनुहोस्।" data-en="Clearly identify the author and viewpoint in opinion pieces. Keep commentary distinct from verified news reporting.">विचार लेखमा लेखकको नाम र दृष्टिकोण स्पष्ट राख्नुहोस्। विचार र प्रमाणित समाचारलाई अलग-अलग पहिचान दिनुहोस्।</p>
-    </section>
-
-    <section class="admin-help" id="adminHelp">
-      <div><span class="kicker" data-ne="तपाईंको प्रकाशन डेस्क" data-en="YOUR PUBLISHING DESK">तपाईंको प्रकाशन डेस्क</span><h2 data-ne="आफ्नो समाचार वा साहित्य थप्नुहोस्" data-en="Add a news story or literary work">आफ्नो समाचार वा साहित्य थप्नुहोस्</h2><p data-ne="यो पहिलो स्थिर नमुना हो। तलको एडमिन प्यानलले सामग्री यस ब्राउजरमा मात्र राख्छ; सार्वजनिक वेबसाइटमा पठाउँदैन। वास्तविक अनलाइन प्रकाशनका लागि सुरक्षित CMS वा ब्याकएन्ड जोड्नुपर्छ।" data-en="This is a static starter. The admin panel below stores entries only in this browser; it does not publish them online. A secure CMS or backend is needed for real online publishing.">यो पहिलो स्थिर नमुना हो। तलको एडमिन प्यानलले सामग्री यस ब्राउजरमा मात्र राख्छ; सार्वजनिक वेबसाइटमा पठाउँदैन। वास्तविक अनलाइन प्रकाशनका लागि सुरक्षित CMS वा ब्याकएन्ड जोड्नुपर्छ।</p></div>
-      <button class="dark-btn" id="adminOpen2" type="button" data-ne="एडमिन प्यानल खोल्नुहोस्" data-en="Open admin panel">एडमिन प्यानल खोल्नुहोस्</button>
-    </section>
-  </main>
-
-  <footer class="footer"><div class="wrap footer-inner"><a class="brand" href="#home"><span class="brand-mark">TC</span><span><b>Thought Circle</b><small data-ne="समाचार • साहित्य • विचार" data-en="News • Literature • Ideas">समाचार • साहित्य • विचार</small></span></a><p data-ne="मौलिक विचार, जिम्मेवार पत्रकारिता, साझा साहित्य।" data-en="Original ideas, responsible journalism, shared literature.">मौलिक विचार, जिम्मेवार पत्रकारिता, साझा साहित्य।</p><small>© <span id="year"></span> Thought Circle</small></div></footer>
-
-  <dialog id="adminDialog" class="admin-dialog">
-    <form method="dialog" class="dialog-top"><div><span class="kicker" data-ne="स्थानीय नमुना" data-en="LOCAL DEMO">स्थानीय नमुना</span><h2 data-ne="एडमिन प्यानल" data-en="Admin panel">एडमिन प्यानल</h2></div><button class="close-btn" aria-label="Close">×</button></form>
-    <p class="demo-warning" data-ne="सुरक्षा सूचना: यो लगइन-सुरक्षित प्रणाली होइन। यसमा पासवर्ड वा संवेदनशील जानकारी नराख्नुहोस्। सामग्री यही ब्राउजरमा मात्र सुरक्षित हुन्छ।" data-en="Security note: This is not an authenticated system. Do not enter passwords or sensitive information. Entries are saved only in this browser.">सुरक्षा सूचना: यो लगइन-सुरक्षित प्रणाली होइन। यसमा पासवर्ड वा संवेदनशील जानकारी नराख्नुहोस्। सामग्री यही ब्राउजरमा मात्र सुरक्षित हुन्छ।</p>
-    <form id="postForm" class="post-form">
-      <label for="postType" data-ne="विभाग" data-en="Section">विभाग</label><select id="postType"><option value="national">राष्ट्रिय समाचार / National</option><option value="international">अन्तर्राष्ट्रिय समाचार / International</option><option value="literature">साहित्य / Literature</option><option value="opinion">विचार / Opinion</option></select>
-      <label for="postTitle" data-ne="शीर्षक" data-en="Headline / title">शीर्षक</label><input id="postTitle" required maxlength="140" placeholder="शीर्षक लेख्नुहोस् / Enter a title">
-      <label for="postAuthor" data-ne="लेखक वा स्रोत" data-en="Author or source">लेखक वा स्रोत</label><input id="postAuthor" maxlength="100" placeholder="नाम वा स्रोत">
-      <label for="postBody" data-ne="सामग्री" data-en="Content">सामग्री</label><textarea id="postBody" required rows="5" placeholder="लेख, समाचार वा सिर्जना"></textarea>
-      <button class="dark-btn" type="submit" data-ne="नमुना सामग्री थप्नुहोस्" data-en="Add demo entry">नमुना सामग्री थप्नुहोस्</button>
-      <p id="adminStatus" role="status" class="status"></p>
-    </form>
-    <div class="local-entries"><h3 data-ne="यस ब्राउजरमा सुरक्षित नमुना सामग्री" data-en="Demo entries saved in this browser">यस ब्राउजरमा सुरक्षित नमुना सामग्री</h3><div id="entriesList"></div><button id="exportBtn" type="button" class="outline-btn" data-ne="JSON फाइल निर्यात गर्नुहोस्" data-en="Export JSON file">JSON फाइल निर्यात गर्नुहोस्</button></div>
-  </dialog>
-  <script src="script.js"></script>
-</body>
-</html>
+  <header><h1>Thought Circle</h1><p>विचार • साहित्य • समाचार</p><nav><a href="#all">सबै</a><a href="#literature">साहित्य</a><a href="#national-news">राष्ट्रिय समाचार</a><a href="#international-news">अन्तर्राष्ट्रिय समाचार</a><a href="admin.html">Admin</a></nav></header>
+  <main><section class="intro"><h2>विचारको संसारमा स्वागत छ</h2><p>समाचार, साहित्य र विचार पढ्नुहोस्।</p></section><p id="message">लेखहरू लोड हुँदैछन्...</p><section id="posts" class="posts"></section></main>
+  <footer>© Thought Circle</footer>
+</body></html>
